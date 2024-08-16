@@ -1,4 +1,4 @@
-/**
+/************************************
  * Definition for singly-linked list.
  * class ListNode {
  *     int val;
@@ -22,6 +22,7 @@ public class Solution {
             tor = tor.next;
             rab = rab.next.next;
             if(tor == rab){
+                System.gc();
                 return true;
             }
         }
