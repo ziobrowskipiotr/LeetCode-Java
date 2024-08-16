@@ -20,7 +20,6 @@ public class Solution {
                 return false;
             }
             else if(tor == rab){
-                System.gc();
                 return true;
             }
         }
