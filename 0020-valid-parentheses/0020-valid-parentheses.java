@@ -43,18 +43,14 @@ class Solution {
                 }
             }
             if(stos.empty()){
-                System.gc();
                 return true;
             }
             else{
-                System.gc();
                 return false;
             }
         }
         else{
-            System.gc();
             return false;
         }
     }
 }
-//1
