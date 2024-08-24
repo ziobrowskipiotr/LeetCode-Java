@@ -1,4 +1,4 @@
-//3
+//4
 class Solution {
     public String simplifyPath(String path) {
         String new_path = new String();
