@@ -22,10 +22,10 @@ class Solution {
                 }
             }
             else{
+                System.gc();
                 return false;
             }
         }
-        System.gc();
         return true;
     }
 }
