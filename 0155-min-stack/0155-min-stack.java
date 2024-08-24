@@ -34,10 +34,10 @@ class MinStack {
     
     public int top() {
         if(this.stos.empty()){
+            System.gc();
             return 0;
         }
         else{
-            System.gc();
             return this.stos.peek();
         }
     }
