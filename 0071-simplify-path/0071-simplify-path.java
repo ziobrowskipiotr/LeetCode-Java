@@ -22,15 +22,6 @@ class Solution {
                     break;
             }
         }
-        while(!stos.empty()){
-            new_path = "/" + stos.pop() + new_path;
-        }
-        if(new_path.equals("")){
-            return "/";
-        }
-        else{
-            System.gc();
-            return new_path;
-        }
+        return "/" + String.join("/", stos);
     }
 }
