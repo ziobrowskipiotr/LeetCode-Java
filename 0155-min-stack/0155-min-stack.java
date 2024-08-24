@@ -43,6 +43,7 @@ class MinStack {
     
     public int getMin() {
         if(minStos.empty()){
+            System.gc();
             return 0;
         }
         else{
