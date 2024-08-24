@@ -9,6 +9,7 @@ class Solution {
                 stos.push(calculations(stos.pop(), stos.pop(), tokens[i]));
             }
         }
+        System.gc();
         return stos.pop();
     }
     public int calculations(int num1, int num2, String op){
