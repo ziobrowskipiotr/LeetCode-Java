@@ -46,6 +46,7 @@ class MinStack {
             return 0;
         }
         else{
+            System.gc();
             return minStos.peek();
         }
     }
