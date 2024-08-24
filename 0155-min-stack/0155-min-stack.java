@@ -7,37 +7,37 @@ class MinStack {
     }
     
     public void push(int val) {
-        if(minStos.empty()){
-            minStos.push(val);
-            stos.push(val);
+        if(this.minStos.empty()){
+            this.minStos.push(val);
+            this.stos.push(val);
         }
-        else if(minStos.peek() >= val){
-            minStos.push(val);
-            stos.push(val);
+        else if(this.minStos.peek() >= val){
+            this.minStos.push(val);
+            this.stos.push(val);
         }
         else{
-            stos.push(val);
+            this.stos.push(val);
         }
     }
     
     public void pop() {
-        if(stos.empty()){
+        if(this.stos.empty()){
         }
-        else if(stos.peek().equals(minStos.peek())){
-            minStos.pop();
-            stos.pop();
+        else if(this.stos.peek().equals(this.minStos.peek())){
+            this.minStos.pop();
+            this.stos.pop();
         }
         else{
-            stos.pop();
+            this.stos.pop();
         }
     }
     
     public int top() {
-        if(stos.empty()){
+        if(this.stos.empty()){
             return 0;
         }
         else{
-            return stos.peek();
+            return this.stos.peek();
         }
     }
     
@@ -57,5 +57,5 @@ class MinStack {
  * obj.push(val);
  * obj.pop();
  * int param_3 = obj.top();
- * int param_4 = obj.getMin();/
+ * int param_4 = obj.getMin();
  */
