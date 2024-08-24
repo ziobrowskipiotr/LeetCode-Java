@@ -23,6 +23,7 @@ class Solution {
                     break;
             }
         }
+        System.gc();
         return "/" + String.join("/", stos);
     }
 }
