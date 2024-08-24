@@ -13,13 +13,8 @@ class Solution {
             }
         }
         for(int i=0; i<rans.length; i++){
-            if(this.map.containsKey(rans[i])){
-                if(this.map.get(rans[i])==0){
-                    return false;
-                }
-                else{
-                    this.map.put(rans[i], this.map.get(rans[i])-1);
-                }
+            if(this.map.containsKey(rans[i]) && !(this.map.get(rans[i])==0)){
+                this.map.put(rans[i], this.map.get(rans[i])-1);
             }
             else{
                 return false;
