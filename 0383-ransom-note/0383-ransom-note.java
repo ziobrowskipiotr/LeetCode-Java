@@ -15,6 +15,7 @@ class Solution {
         for(int i=0; i<rans.length; i++){
             if(this.map.containsKey(rans[i])){
                 if(this.map.get(rans[i])<1){
+                    System.gc();
                     return false;
                 }
                 else{
@@ -22,7 +23,6 @@ class Solution {
                 }
             }
             else{
-                System.gc();
                 return false;
             }
         }
