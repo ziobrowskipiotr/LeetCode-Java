@@ -16,9 +16,6 @@ class Solution {
                     }
                 case "":
                     continue;
-                case "...":
-                    stos.push(element);
-                    break;
                 default:
                     stos.push(element);
                     break;
