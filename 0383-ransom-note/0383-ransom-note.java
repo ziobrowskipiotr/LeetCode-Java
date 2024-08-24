@@ -25,6 +25,7 @@ class Solution {
                 return false;
             }
         }
+        System.gc();
         return true;
     }
 }
