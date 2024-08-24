@@ -1,4 +1,3 @@
-//4
 class Solution {
     public String simplifyPath(String path) {
         String new_path = new String();
@@ -23,7 +22,6 @@ class Solution {
                     break;
             }
         }
-        System.gc();
         return "/" + String.join("/", stos);
     }
 }
