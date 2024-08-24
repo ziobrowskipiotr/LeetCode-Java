@@ -14,8 +14,7 @@ class Solution {
         }
         for(int i=0; i<rans.length; i++){
             if(this.map.containsKey(rans[i])){
-                if(this.map.get(rans[i])<1){
-                    System.gc();
+                if(this.map.get(rans[i])==0){
                     return false;
                 }
                 else{
