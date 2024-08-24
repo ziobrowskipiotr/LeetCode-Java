@@ -6,24 +6,22 @@ class Solution {
                 stos.push(Integer.parseInt(tokens[i]));
             }
             catch(NumberFormatException e){
-                stos.push(calculations(stos.pop(), stos.pop(), tokens[i]));
+                int num1 = stos.pop();
+                int num2 = stos.pop();
+                if(tokens[i].equals("+")){
+                    stos.push(num2 + num1);
+                }
+                else if(tokens[i].equals("-")){
+                    stos.push(num2 - num1);
+                }
+                else if(tokens[i].equals("*")){
+                    stos.push(num2 * num1);
+                }
+                else{
+                    stos.push(num2 / num1);
+                }
             }
         }
         return stos.pop();
-    }
-    public int calculations(int num1, int num2, String op){
-        if(op.equals("+")){
-            return num2 + num1;
-        }
-        else if(op.equals("-")){
-            return num2 - num1;
-        }
-        else if(op.equals("*")){
-            return num2 * num1;
-        }
-        else{
-            return num2 / num1;
-        }
-
     }
 }
