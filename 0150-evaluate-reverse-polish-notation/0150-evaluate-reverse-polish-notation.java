@@ -1,6 +1,5 @@
 class Solution {
     Stack<Integer> stos = new Stack <>();
-    int wynik;
     public int evalRPN(String[] tokens) {
         for(int i=0; i<tokens.length; i++){
             try{
@@ -13,17 +12,18 @@ class Solution {
         return stos.pop();
     }
     public int calculations(int num1, int num2, String op){
-        switch(op){
-            case "+":
-                return num2 + num1;
-            case "-":
-                return num2 - num1;
-            case "*":
-                return num2 * num1;
-            case "/":
-                return num2 / num1;
-            default:
-                return -1;
+        if(op.equals("+")){
+            return num2 + num1;
         }
+        else if(op.equals("-")){
+            return num2 - num1;
+        }
+        else if(op.equals("*")){
+            return num2 * num1;
+        }
+        else{
+            return num2 / num1;
+        }
+
     }
 }
