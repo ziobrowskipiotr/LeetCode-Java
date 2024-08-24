@@ -2,6 +2,7 @@ class Solution {
     HashMap<Character, Integer> map = new HashMap<>();
 
     public boolean canConstruct(String ransomNote, String magazine) {
+        System.gc();
         char[] mag = magazine.toCharArray();
         char[] rans = ransomNote.toCharArray();
         for(int i=0; i<mag.length; i++){
