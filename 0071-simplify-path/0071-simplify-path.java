@@ -29,6 +29,7 @@ class Solution {
             return "/";
         }
         else{
+            System.gc();
             return new_path;
         }
     }
