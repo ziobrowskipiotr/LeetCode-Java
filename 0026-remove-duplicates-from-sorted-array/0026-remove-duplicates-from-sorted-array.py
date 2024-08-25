@@ -4,17 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        self.tmp = []
         i = 0
+        k = 0
         point1 = nums[0]
         while(i<len(nums)-1):
             point2 = nums[i+1]
             if point1 == point2:
                 del nums[i+1]
-                self.tmp.append("_")
+                k+=1
             else:
                 i+=1
                 point1 = nums[i]
-        nums += self.tmp
-        del self.tmp
+        nums += k*"_"
         return i+1
