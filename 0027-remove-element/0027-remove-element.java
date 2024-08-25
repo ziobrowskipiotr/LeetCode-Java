@@ -24,7 +24,6 @@ class Solution {
                 this.j++;
             }
         }
-        System.gc();
         return this.i;
     }
 }
