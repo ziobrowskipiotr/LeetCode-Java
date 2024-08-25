@@ -4,7 +4,6 @@ class Solution {
     int val;
     int[] nums;
     public int removeElement(int[] nums, int val) {
-        System.gc();
         this.val = val;
         this.nums = nums;
         while(this.j<this.nums.length){
@@ -25,6 +24,7 @@ class Solution {
                 this.j++;
             }
         }
+        System.gc();
         return this.i;
     }
 }
