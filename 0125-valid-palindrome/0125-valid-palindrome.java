@@ -2,14 +2,13 @@ class Solution {
     ArrayList<Character> result = new ArrayList<>();
     public boolean isPalindrome(String s) {
         for(int i=0; i<s.length(); i++){
-            if(96<(int)s.charAt(i) && (int)s.charAt(i)<123){
-                this.result.add(s.charAt(i));
-            }
-            else if(64<(int)s.charAt(i) && (int)s.charAt(i)<91){
-                this.result.add((char)((int)s.charAt(i)+32));
-            }
-            else if(47<(int)s.charAt(i) && (int)s.charAt(i)<58){
-                this.result.add(s.charAt(i));
+            if(Character.isLetterOrDigit(s.charAt(i))){
+                if(Character.isUpperCase(s.charAt(i))){
+                    this.result.add(Character.toLowerCase(s.charAt(i)));
+                }
+                else{
+                    this.result.add(s.charAt(i));
+                }
             }
             else{
                 continue;
