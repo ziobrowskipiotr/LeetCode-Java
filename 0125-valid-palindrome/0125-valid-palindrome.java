@@ -1,23 +1,20 @@
 class Solution {
-    ArrayList<Character> result = new ArrayList<>();
     public boolean isPalindrome(String s) {
-        for(int i=0; i<s.length(); i++){
-            if(96<(int)s.charAt(i) && (int)s.charAt(i)<123){
-                this.result.add(s.charAt(i));
+        int i = 0;
+        int j = s.length()-1;
+        while(i<j){
+            while(!Character.isLetterOrDigit(s.charAt(i)) && i<j){
+                i++;
             }
-            else if(64<(int)s.charAt(i) && (int)s.charAt(i)<91){
-                this.result.add((char)((int)s.charAt(i)+32));
+            while(!Character.isLetterOrDigit(s.charAt(j)) && i<j){
+                j--;
             }
-            else if(47<(int)s.charAt(i) && (int)s.charAt(i)<58){
-                this.result.add(s.charAt(i));
+            if(s.charAt(i) != s.charAt(j) && (Character.toLowerCase(s.charAt(i)) != s.charAt(j) && Character.toLowerCase(s.charAt(j)) != s.charAt(i))){
+                return false;
             }
             else{
-                continue;
-            }
-        }
-        for(int i=0; i<this.result.size()/2; i++){
-            if(this.result.get(i) != this.result.get(this.result.size()-1-i)){
-                return false;
+                i++;
+                j--;
             }
         }
         return true;
