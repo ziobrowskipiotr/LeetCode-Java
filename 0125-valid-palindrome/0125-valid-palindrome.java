@@ -1,6 +1,7 @@
 class Solution {
     ArrayList<Character> result = new ArrayList<>();
     public boolean isPalindrome(String s) {
+        System.gc();
         for(int i=0; i<s.length(); i++){
             if(96<(int)s.charAt(i) && (int)s.charAt(i)<123){
                 this.result.add(s.charAt(i));
