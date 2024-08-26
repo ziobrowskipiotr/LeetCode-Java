@@ -20,6 +20,7 @@ class Solution {
                 }
             }
         }
+        System.gc();
         return lista;
     }
 }
