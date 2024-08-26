@@ -1,10 +1,7 @@
-//2
+//
 class Solution {
     List<String> lista = new LinkedList<>();
     public List<String> summaryRanges(int[] nums) {
-        if(nums.length == 0){
-            return this.lista;
-        }
         int i = 0;
         int j = 1;
         while(i<nums.length){
