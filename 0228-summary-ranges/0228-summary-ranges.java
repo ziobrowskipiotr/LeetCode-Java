@@ -15,7 +15,7 @@ class Solution {
                     j++;
                 }
                 else{
-                    this.lista.add(""+nums[i]);
+                    this.lista.add(Integer.toString(nums[i]));
                     i++;
                     j++;
                 }
