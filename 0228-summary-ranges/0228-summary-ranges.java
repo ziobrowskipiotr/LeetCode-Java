@@ -10,7 +10,7 @@ class Solution {
             }
             else{
                 if(nums[i] != nums[j-1]){
-                    this.lista.add(""+nums[i]+"->"+nums[j-1]);
+                    this.lista.add(nums[i]+"->"+nums[j-1]);
                     i = j;
                     j++;
                 }
