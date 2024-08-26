@@ -17,11 +17,9 @@ class Solution {
         }
         for(int i=0; i<this.result.size()/2; i++){
             if(this.result.get(i) != this.result.get(this.result.size()-1-i)){
-                System.gc();
                 return false;
             }
         }
-        System.gc();
         return true;
     }
 }
