@@ -16,8 +16,13 @@ class Solution {
                 }
                 else{
                     this.lista.add(Integer.toString(nums[i]));
-                    i++;
-                    j++;
+                    if(i<nums.length){
+                        i++;
+                        j++;
+                    }
+                    else{
+                        break;
+                    }
                 }
             }
         }
