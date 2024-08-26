@@ -8,6 +8,9 @@ class Solution {
             else if(64<(int)s.charAt(i) && (int)s.charAt(i)<91){
                 this.result.add((char)((int)s.charAt(i)+32));
             }
+            else if(47<(int)s.charAt(i) && (int)s.charAt(i)<58){
+                this.result.add(s.charAt(i));
+            }
             else{
                 continue;
             }
