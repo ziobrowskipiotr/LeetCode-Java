@@ -1,7 +1,6 @@
 class Solution {
     LinkedList<String> lista = new LinkedList<>();
     public List<String> summaryRanges(int[] nums) {
-        System.gc();
         int i = 0;
         int j = 1;
         while(i<nums.length){
