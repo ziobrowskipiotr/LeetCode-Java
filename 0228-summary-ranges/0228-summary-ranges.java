@@ -9,17 +9,17 @@ class Solution {
             }
             else{
                 if(nums[i] != nums[j-1]){
-                    lista.add(""+nums[i]+"->"+nums[j-1]);
+                    this.lista.add(""+nums[i]+"->"+nums[j-1]);
                     i = j;
                     j++;
                 }
                 else{
-                    lista.add(""+nums[i]);
+                    this.lista.add(""+nums[i]);
                     i++;
                     j++;
                 }
             }
         }
-        return lista;
+        return this.lista;
     }
 }
