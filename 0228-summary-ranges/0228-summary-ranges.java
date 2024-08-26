@@ -1,3 +1,4 @@
+//1
 class Solution {
     LinkedList<String> lista = new LinkedList<>();
     public List<String> summaryRanges(int[] nums) {
