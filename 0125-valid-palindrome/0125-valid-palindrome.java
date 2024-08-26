@@ -9,7 +9,9 @@ class Solution {
             while(!Character.isLetterOrDigit(s.charAt(j)) && i<j){
                 j--;
             }
-            if(s.charAt(i) != s.charAt(j) && (Character.toLowerCase(s.charAt(i)) != s.charAt(j) && Character.toLowerCase(s.charAt(j)) != s.charAt(i))){
+            if(s.charAt(i) != s.charAt(j) && 
+            (Character.toLowerCase(s.charAt(i)) != s.charAt(j) && 
+            Character.toLowerCase(s.charAt(j)) != s.charAt(i))){
                 return false;
             }
             else{
