@@ -1,4 +1,4 @@
-//1
+//2
 class Solution {
     List<String> lista = new LinkedList<>();
     public List<String> summaryRanges(int[] nums) {
