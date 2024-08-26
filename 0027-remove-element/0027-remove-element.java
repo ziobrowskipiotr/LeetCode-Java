@@ -1,4 +1,4 @@
-//3
+//4
 class Solution {
     public int removeElement(int[] nums, int val){
         int j = 0;
