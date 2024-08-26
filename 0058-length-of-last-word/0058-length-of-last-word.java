@@ -12,10 +12,9 @@ class Solution {
                 while(i>0 && Character.isLetterOrDigit(s.charAt(i-1))){
                     i--;
                 }
-                i--;
                 break;
             }
         }
-        return j-i;
+        return j-i-1;
     }
 }
