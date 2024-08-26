@@ -1,6 +1,6 @@
 //1
 class Solution {
-    LinkedList<String> lista = new LinkedList<>();
+    List<String> lista = new LinkedList<>();
     public List<String> summaryRanges(int[] nums) {
         int i = 0;
         int j = 1;
