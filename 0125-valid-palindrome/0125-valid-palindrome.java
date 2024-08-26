@@ -1,4 +1,4 @@
-//1
+//2
 class Solution {
     public boolean isPalindrome(String s) {
         int i = 0;
