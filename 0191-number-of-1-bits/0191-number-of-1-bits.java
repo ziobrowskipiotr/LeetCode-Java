@@ -1,5 +1,6 @@
 class Solution {
     public int hammingWeight(int n) {
+        System.gc();
         int[] tab = new int[]{1<<30, 1<<23, 1<<15, 1<<7, 0};
         while(tab[3] > 0){
             if((tab[1] & n)>0){
@@ -22,7 +23,6 @@ class Solution {
             tab[2] >>=1;
             tab[3] >>=1;
         }
-        System.gc();
         return tab[4];
     }
 }
