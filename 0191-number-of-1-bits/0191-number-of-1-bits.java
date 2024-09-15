@@ -22,6 +22,7 @@ class Solution {
             tab[2] >>=1;
             tab[3] >>=1;
         }
+        System.gc();
         return tab[4];
     }
 }
