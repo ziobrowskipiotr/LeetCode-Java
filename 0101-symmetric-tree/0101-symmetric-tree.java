@@ -32,7 +32,6 @@ class Solution {
         }
     }
     public boolean isSymmetric(TreeNode root) {
-        System.gc();
         return equal(root.left, root.right);
     }
 }
