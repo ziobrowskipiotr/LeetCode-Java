@@ -1,4 +1,5 @@
 class Solution {
+    
     public int hammingWeight(int n) {
         int[] tab = new int[]{1<<30, 1<<15, 0};
         while(tab[1] > 0){
