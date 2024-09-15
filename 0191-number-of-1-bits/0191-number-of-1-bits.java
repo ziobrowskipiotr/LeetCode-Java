@@ -1,31 +1,27 @@
 class Solution {
     public int hammingWeight(int n) {
-        int mask1 = 1<<30;
-        int mask2 = 1<<23;
-        int mask3 = 1<<15;
-        int mask4 = 1<<7;
-        int result = 0;
-        while(mask4 > 0){
-            if((mask2 & n)>0){
-                result++;
+        int[] tab = new int[]{1<<30, 1<<23, 1<<15, 1<<7, 0};
+        while(tab[3] > 0){
+            if((tab[1] & n)>0){
+                tab[4]++;
             }
-            if((mask3 & n)>0){
-                result++;
+            if((tab[2] & n)>0){
+                tab[4]++;
             }
-            if((mask4 & n)>0){
-                result++;
+            if((tab[3] & n)>0){
+                tab[4]++;
             }
-            if(mask1 < (1<<24)){
+            if(tab[0] < (1<<24)){
                 break;
             }
-            if((mask1 & n)>0){
-                result++;
+            if((tab[0] & n)>0){
+                tab[4]++;
             }
-            mask1 >>=1;
-            mask2 >>=1;
-            mask3 >>=1;
-            mask4 >>=1;
+            tab[0] >>=1;
+            tab[1] >>=1;
+            tab[2] >>=1;
+            tab[3] >>=1;
         }
-        return result;
+        return tab[4];
     }
 }
