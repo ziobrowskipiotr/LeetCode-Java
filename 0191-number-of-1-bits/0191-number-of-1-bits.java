@@ -7,7 +7,6 @@ class Solution {
             }
             tab[0] >>=1;
         }
-        System.gc();
         return tab[1];
     }
 }
