@@ -14,42 +14,24 @@
  * }
  */
 class Solution {
-    public boolean isSymmetric(TreeNode root) {
-        List<TreeNode> lista = new ArrayList<>();
-        lista.add(root.left);
-        lista.add(root.right); 
-        while(!lista.isEmpty()){
-            if(lista.get(0) == null || lista.get(1) == null){
-                if(lista.get(0) == null && lista.get(1) == null){}
+    public boolean equal(TreeNode root1, TreeNode root2){
+        if(root1 == null && root2 == null) return true;
+        else if(root1 == null || root2 == null) return false;
+        else if(root1.val != root2.val) return false;
+        else{
+            if(equal(root1.left, root2.right)){
+                if(equal(root1.right, root2.left))
+                    return true;
                 else{
                     return false;
                 }
             }
-            else if(lista.get(0).val != lista.get(1).val){
-                System.out.println(lista.get(0).val);
-                System.out.println( lista.get(1).val);
+            else{
                 return false;
             }
-            else{
-                lista.add(lista.get(0).left);
-                lista.add(lista.get(1).right);
-            }
-            if(lista.get(1) == null || lista.get(0) == null){
-                if(lista.get(1) == null && lista.get(0) == null){}
-                else{
-                    return false;
-                }
-            }
-            else if(lista.get(1).val != lista.get(0).val){
-                return false;
-            }
-            else{
-                lista.add(lista.get(0).right);
-                lista.add(lista.get(1).left);
-            }
-            lista.remove(0);
-            lista.remove(0);
         }
-        return true;
+    }
+    public boolean isSymmetric(TreeNode root) {
+        return equal(root.left, root.right);
     }
 }
