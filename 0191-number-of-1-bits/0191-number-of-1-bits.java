@@ -1,28 +1,19 @@
 class Solution {
     public int hammingWeight(int n) {
-        System.gc();
-        int[] tab = new int[]{1<<30, 1<<23, 1<<15, 1<<7, 0};
-        while(tab[3] > 0){
+        int[] tab = new int[]{1<<30, 1<<15, 0};
+        while(tab[1] > 0){
             if((tab[1] & n)>0){
-                tab[4]++;
+                tab[2]++;
             }
-            if((tab[2] & n)>0){
-                tab[4]++;
-            }
-            if((tab[3] & n)>0){
-                tab[4]++;
-            }
-            if(tab[0] < (1<<24)){
+            if(tab[0] < (1<<16)){
                 break;
             }
             if((tab[0] & n)>0){
-                tab[4]++;
+                tab[2]++;
             }
             tab[0] >>=1;
             tab[1] >>=1;
-            tab[2] >>=1;
-            tab[3] >>=1;
         }
-        return tab[4];
+        return tab[2];
     }
 }
