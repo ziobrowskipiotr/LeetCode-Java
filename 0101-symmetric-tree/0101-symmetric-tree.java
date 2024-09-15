@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-
     public boolean equal(TreeNode root1, TreeNode root2){
         if(root1 == null && root2 == null) return true;
         else if(root1 == null || root2 == null) return false;
