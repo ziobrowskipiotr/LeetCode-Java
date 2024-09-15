@@ -1,13 +1,13 @@
 class Solution {
-
     public int hammingWeight(int n) {
-        int[] tab = new int[]{1<<30, 0};
-        while(tab[0] > 0){
-            if((tab[0] & n)>0){
-                tab[1]++;
+        int mask = 1<<30;
+        int result = 0;
+        while(mask > 0){
+            if((mask & n)>0){
+                result++;
             }
-            tab[0] >>=1;
+            mask >>=1;
         }
-        return tab[1];
+        return result;
     }
 }
