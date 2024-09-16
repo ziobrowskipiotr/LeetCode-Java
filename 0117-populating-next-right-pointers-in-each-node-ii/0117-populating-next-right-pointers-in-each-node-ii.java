@@ -21,48 +21,49 @@ class Node {
 };
 */
 class Solution {
-    public void con(Node root, Node temp){
+    Node temp;
+    public void con(Node root){
         if(root.left != null && root.right !=null){
             root.left.next = root.right;
         }
         if(root.next != null){
-            temp = root.next;
-            while(temp != null){
+            this.temp = root.next;
+            while(this.temp != null){
                 if(root.right != null){
-                    if(temp.left != null){
-                        root.right.next = temp.left;
+                    if(this.temp.left != null){
+                        root.right.next = this.temp.left;
                         break;
                     }
-                    else if(temp.right != null){
-                        root.right.next = temp.right;
-                        break;
-                    }
-                }
-                else if(root.left != null){
-                    if(temp.left != null){
-                        root.left.next = temp.left;
-                        break;
-                    }
-                    else if(temp.right != null){
-                        root.left.next = temp.right;
+                    if(this.temp.right != null){
+                        root.right.next = this.temp.right;
                         break;
                     }
                 }
-                temp = temp.next;
+                if(root.left != null){
+                    if(this.temp.left != null){
+                        root.left.next = this.temp.left;
+                        break;
+                    }
+                    if(this.temp.right != null){
+                        root.left.next = this.temp.right;
+                        break;
+                    }
+                }
+                this.temp = temp.next;
             }
         }
         if(root.right != null){
-            con(root.right, temp);
+            con(root.right);
         }
         if(root.left != null){
-            con(root.left, temp);
+            con(root.left);
         }
     }
     public Node connect(Node root) {
         if(root == null){
             return root;
         }
-        con(root, root);
+        con(root);
         return root;
     }
 }
