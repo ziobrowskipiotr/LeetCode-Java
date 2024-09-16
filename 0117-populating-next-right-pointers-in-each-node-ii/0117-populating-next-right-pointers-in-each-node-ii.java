@@ -20,7 +20,6 @@ class Node {
     }
 };
 */
-
 class Solution {
     Node temp;
     public void con(Node root){
