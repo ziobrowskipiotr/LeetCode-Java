@@ -20,18 +20,22 @@ class Solution {
             return lista;
         }
         Queue<TreeNode> kolejka = new LinkedList<>();
+        int temp = 1;
         kolejka.add(root);
         while(!kolejka.isEmpty()){
             lista.add(kolejka.element().val);
-            int siz = kolejka.size();
+            int siz = temp;
             for(int j=0; j<siz; j++){
                 if(kolejka.element().right != null){
                     kolejka.add(kolejka.element().right);
+                    temp++;
                 }
                 if(kolejka.element().left != null){
                     kolejka.add(kolejka.element().left);
+                    temp++;
                 }
                 kolejka.remove();
+                temp--;
             }
         }
         return lista;
