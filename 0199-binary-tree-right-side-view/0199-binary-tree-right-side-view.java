@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> lista = new LinkedList<>();
         if(root == null){
