@@ -34,17 +34,17 @@ class Solution {
                         root.right.next = this.temp.left;
                         break;
                     }
-                    if(this.temp.right != null){
+                    else if(this.temp.right != null){
                         root.right.next = this.temp.right;
                         break;
                     }
                 }
-                if(root.left != null){
+                else if(root.left != null){
                     if(this.temp.left != null){
                         root.left.next = this.temp.left;
                         break;
                     }
-                    if(this.temp.right != null){
+                    else if(this.temp.right != null){
                         root.left.next = this.temp.right;
                         break;
                     }
@@ -63,6 +63,7 @@ class Solution {
         if(root == null){
             return root;
         }
+        
         con(root);
         return root;
     }
