@@ -21,11 +21,9 @@ class Solution {
         }
         Deque<TreeNode> kolejka = new LinkedList<>();
         kolejka.add(root);
-        int siz = 0;
-        double sum = 0;
         while(!kolejka.isEmpty()){
-            siz = kolejka.size();
-            sum = 0;
+            int siz = kolejka.size();
+            double sum = 0;
             for(int i=0; i<siz; i++){
                 if(kolejka.peekFirst().left != null){
                     kolejka.add(kolejka.peekFirst().left);
