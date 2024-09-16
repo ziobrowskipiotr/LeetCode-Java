@@ -36,6 +36,7 @@ class Solution {
                 siz--;
             }
         }
+        System.gc();
         return lista;
     }
 }
