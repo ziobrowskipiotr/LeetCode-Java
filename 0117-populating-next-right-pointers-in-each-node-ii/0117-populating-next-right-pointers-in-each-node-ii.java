@@ -21,50 +21,48 @@ class Node {
 };
 */
 class Solution {
-    Node temp;
-    public void con(Node root){
+    public void con(Node root, Node temp){
         if(root.left != null && root.right !=null){
             root.left.next = root.right;
         }
         if(root.next != null){
-            this.temp = root.next;
-            while(this.temp != null){
+            temp = root.next;
+            while(temp != null){
                 if(root.right != null){
-                    if(this.temp.left != null){
-                        root.right.next = this.temp.left;
+                    if(temp.left != null){
+                        root.right.next = temp.left;
                         break;
                     }
-                    else if(this.temp.right != null){
-                        root.right.next = this.temp.right;
+                    else if(temp.right != null){
+                        root.right.next = temp.right;
                         break;
                     }
                 }
                 else if(root.left != null){
-                    if(this.temp.left != null){
-                        root.left.next = this.temp.left;
+                    if(temp.left != null){
+                        root.left.next = temp.left;
                         break;
                     }
-                    else if(this.temp.right != null){
-                        root.left.next = this.temp.right;
+                    else if(temp.right != null){
+                        root.left.next = temp.right;
                         break;
                     }
                 }
-                this.temp = temp.next;
+                temp = temp.next;
             }
         }
         if(root.right != null){
-            con(root.right);
+            con(root.right, temp);
         }
         if(root.left != null){
-            con(root.left);
+            con(root.left, temp);
         }
     }
     public Node connect(Node root) {
         if(root == null){
             return root;
         }
-        
-        con(root);
+        con(root, root);
         return root;
     }
 }
