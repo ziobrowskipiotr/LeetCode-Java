@@ -17,13 +17,12 @@ class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> lista = new ArrayList<>();
         Deque<TreeNode> kolejka = new LinkedList<>();
-        TreeNode cur;
         kolejka.add(root);
         while(!kolejka.isEmpty()){
             int siz = kolejka.size();
             double sum = 0;
             for(int i=0; i<siz; i++){
-                cur = kolejka.pollFirst();
+                TreeNode cur = kolejka.pollFirst();
                 if(cur.left != null){
                     kolejka.add(cur.left);
                 }
