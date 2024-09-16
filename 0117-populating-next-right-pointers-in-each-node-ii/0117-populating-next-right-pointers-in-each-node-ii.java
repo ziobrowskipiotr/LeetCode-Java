@@ -64,7 +64,6 @@ class Solution {
             return root;
         }
         con(root, root);
-        System.gc();
         return root;
     }
 }
