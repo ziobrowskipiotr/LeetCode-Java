@@ -22,13 +22,14 @@ class Solution {
             int siz = kolejka.size();
             double sum = 0;
             for(int i=0; i<siz; i++){
-                if(kolejka.peekFirst().left != null){
-                    kolejka.add(kolejka.peekFirst().left);
+                TreeNode cur = kolejka.pollFirst();
+                if(cur.left != null){
+                    kolejka.add(cur.left);
                 }
-                if(kolejka.peekFirst().right != null){
-                    kolejka.add(kolejka.peekFirst().right);
+                if(cur.right != null){
+                    kolejka.add(cur.right);
                 }
-                sum+=kolejka.pollFirst().val;
+                sum+=cur.val;
             }
             lista.add(sum/siz);
         }
