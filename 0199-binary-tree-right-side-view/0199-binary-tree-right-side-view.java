@@ -14,30 +14,26 @@
  * }
  */
 class Solution {
+
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> lista = new LinkedList<>();
         if(root == null){
             return lista;
         }
-        List<TreeNode> kolejka = new ArrayList<>();
-        int first = 0;
-        int temp = 1;
-        int siz = temp;
+        Queue<TreeNode> kolejka = new LinkedList<>();
         kolejka.add(root);
-        while(first<siz){
-            lista.add(kolejka.get(first).val);
-            while(first<siz){
-                if(kolejka.get(first).right != null){
-                    kolejka.add(kolejka.get(first).right);
-                    temp++;
+        while(!kolejka.isEmpty()){
+            lista.add(kolejka.element().val);
+            int siz = kolejka.size();
+            for(int j=0; j<siz; j++){
+                if(kolejka.element().right != null){
+                    kolejka.add(kolejka.element().right);
                 }
-                if(kolejka.get(first).left != null){
-                    kolejka.add(kolejka.get(first).left);
-                    temp++;
+                if(kolejka.element().left != null){
+                    kolejka.add(kolejka.element().left);
                 }
-                first++;
+                kolejka.remove();
             }
-            siz = temp;
         }
         return lista;
     }
