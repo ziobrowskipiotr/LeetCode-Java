@@ -14,12 +14,8 @@
  * }
  */
 class Solution {
-
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> lista = new ArrayList<>();
-        if(root == null){
-            return lista;
-        }
         Deque<TreeNode> kolejka = new LinkedList<>();
         kolejka.add(root);
         while(!kolejka.isEmpty()){
