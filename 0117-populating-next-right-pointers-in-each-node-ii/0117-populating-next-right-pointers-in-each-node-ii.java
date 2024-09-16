@@ -59,7 +59,7 @@ class Solution {
         }
     }
     public Node connect(Node root) {
-        if(root == null || (root.left == null && root.right == null)){
+        if(root == null){
             return root;
         }
         con(root, root);
