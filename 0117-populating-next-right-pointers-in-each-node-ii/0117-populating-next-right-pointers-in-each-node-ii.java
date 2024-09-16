@@ -60,6 +60,7 @@ class Solution {
         }
     }
     public Node connect(Node root) {
+        System.gc();
         if(root == null){
             return root;
         }
