@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> lista = new ArrayList<>();
         Deque<TreeNode> kolejka = new LinkedList<>();
