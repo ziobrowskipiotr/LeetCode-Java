@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> lista = new ArrayList<>();
         if(root == null){
@@ -28,14 +27,13 @@ class Solution {
             siz = kolejka.size();
             sum = 0;
             for(int i=0; i<siz; i++){
-                sum+=kolejka.peekFirst().val;
                 if(kolejka.peekFirst().left != null){
                     kolejka.add(kolejka.peekFirst().left);
                 }
                 if(kolejka.peekFirst().right != null){
                     kolejka.add(kolejka.peekFirst().right);
                 }
-                kolejka.pollFirst();
+                sum+=kolejka.pollFirst().val;
             }
             lista.add(sum/siz);
         }
