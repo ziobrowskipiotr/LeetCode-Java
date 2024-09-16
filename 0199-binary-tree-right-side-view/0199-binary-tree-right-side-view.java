@@ -23,14 +23,14 @@ class Solution {
         kolejka.add(root);
         int siz;
         while(!kolejka.isEmpty()){
-            lista.add(kolejka.getFirst().val);
+            lista.add(kolejka.peekFirst().val);
             siz = kolejka.size();
             while(siz>0){
-                if(kolejka.getFirst().right != null){
-                    kolejka.add(kolejka.getFirst().right);
+                if(kolejka.peekFirst().right != null){
+                    kolejka.add(kolejka.peekFirst().right);
                 }
-                if(kolejka.getFirst().left != null){
-                    kolejka.add(kolejka.getFirst().left);
+                if(kolejka.peekFirst().left != null){
+                    kolejka.add(kolejka.peekFirst().left);
                 }
                 kolejka.poll();
                 siz--;
