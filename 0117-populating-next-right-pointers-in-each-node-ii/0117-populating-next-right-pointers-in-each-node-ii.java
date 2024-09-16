@@ -28,29 +28,29 @@ class Solution {
         }
         if(root.next != null){
             this.temp = root.next;
-        }
-        while(this.temp != null){
-            if(root.right != null){
-                if(this.temp.left != null){
-                    root.right.next = this.temp.left;
-                    break;
+            while(this.temp != null){
+                if(root.right != null){
+                    if(this.temp.left != null){
+                        root.right.next = this.temp.left;
+                        break;
+                    }
+                    else if(this.temp.right != null){
+                        root.right.next = this.temp.right;
+                        break;
+                    }
                 }
-                else if(this.temp.right != null){
-                    root.right.next = this.temp.right;
-                    break;
+                else if(root.left != null){
+                    if(this.temp.left != null){
+                        root.left.next = this.temp.left;
+                        break;
+                    }
+                    else if(this.temp.right != null){
+                        root.left.next = this.temp.right;
+                        break;
+                    }
                 }
+                this.temp = temp.next;
             }
-            else if(root.left != null){
-                if(this.temp.left != null){
-                    root.left.next = this.temp.left;
-                    break;
-                }
-                else if(this.temp.right != null){
-                    root.left.next = this.temp.right;
-                    break;
-                }
-            }
-            this.temp = temp.next;
         }
         if(root.right != null){
             con(root.right);
