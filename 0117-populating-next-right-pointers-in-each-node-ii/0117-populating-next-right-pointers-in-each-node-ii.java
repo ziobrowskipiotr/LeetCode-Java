@@ -34,17 +34,17 @@ class Solution {
                         root.right.next = this.temp.left;
                         break;
                     }
-                    else if(this.temp.right != null){
+                    if(this.temp.right != null){
                         root.right.next = this.temp.right;
                         break;
                     }
                 }
-                else if(root.left != null){
+                if(root.left != null){
                     if(this.temp.left != null){
                         root.left.next = this.temp.left;
                         break;
                     }
-                    else if(this.temp.right != null){
+                    if(this.temp.right != null){
                         root.left.next = this.temp.right;
                         break;
                     }
