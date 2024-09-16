@@ -32,7 +32,7 @@ class Solution {
                 if(kolejka.getFirst().left != null){
                     kolejka.add(kolejka.getFirst().left);
                 }
-                kolejka.removeFirst();
+                kolejka.poll();
                 siz--;
             }
         }
