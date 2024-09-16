@@ -19,25 +19,22 @@ class Solution {
         if(root == null){
             return lista;
         }
-        List<TreeNode> kolejka = new ArrayList<>();
-        int first = 0;
-        int temp = 1;
-        int siz = temp;
+        Deque<TreeNode> kolejka = new ArrayDeque<>();
         kolejka.add(root);
-        while(first<siz){
-            lista.add(kolejka.get(first).val);
-            while(first<siz){
-                if(kolejka.get(first).right != null){
-                    kolejka.add(kolejka.get(first).right);
-                    temp++;
+        int siz;
+        while(!kolejka.isEmpty()){
+            lista.add(kolejka.getFirst().val);
+            siz = kolejka.size();
+            while(siz>0){
+                if(kolejka.getFirst().right != null){
+                    kolejka.add(kolejka.getFirst().right);
                 }
-                if(kolejka.get(first).left != null){
-                    kolejka.add(kolejka.get(first).left);
-                    temp++;
+                if(kolejka.getFirst().left != null){
+                    kolejka.add(kolejka.getFirst().left);
                 }
-                first++;
+                kolejka.removeFirst();
+                siz--;
             }
-            siz = temp;
         }
         return lista;
     }
