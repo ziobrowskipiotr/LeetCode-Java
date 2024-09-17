@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-
     private int val = -1;
     private int min = 100000;
     public void insertOrder(TreeNode root) {
