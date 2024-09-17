@@ -14,12 +14,13 @@
  * }
  */
 class Solution {
+
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> lista = new LinkedList<>();
         if(root == null){
             return lista;
         }
-        Deque<TreeNode> kolejka = new ArrayDeque<>();
+        Deque<TreeNode> kolejka = new LinkedList<>();
         TreeNode cur;
         int siz;
         kolejka.add(root);
