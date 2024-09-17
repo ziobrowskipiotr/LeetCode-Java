@@ -13,7 +13,6 @@
  *     }
  * }
  */
-
 class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> lista = new ArrayList<>();
