@@ -19,15 +19,15 @@ class Solution {
     public void insertOrder(TreeNode root) {
         if(root != null){
             insertOrder(root.left);
-            if(val != -1 && root.val - val < min){
-                min = root.val - val;
+            if(this.val != -1 && root.val - this.val < this.min){
+                this.min = root.val - this.val;
             }
-            val = root.val;
+            this.val = root.val;
             insertOrder(root.right);
         }
     }
     public int getMinimumDifference(TreeNode root) {
         insertOrder(root);
-        return min;
+        return this.min;
     }
 }
