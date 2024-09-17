@@ -20,19 +20,20 @@ class Solution {
             return lista;
         }
         Deque<TreeNode> kolejka = new ArrayDeque<>();
-        kolejka.add(root);
+        TreeNode cur;
         int siz;
+        kolejka.add(root);
         while(!kolejka.isEmpty()){
             lista.add(kolejka.peekFirst().val);
             siz = kolejka.size();
             while(siz>0){
-                if(kolejka.peekFirst().right != null){
-                    kolejka.add(kolejka.peekFirst().right);
+                cur = kolejka.pollFirst();
+                if(cur.right != null){
+                    kolejka.add(cur.right);
                 }
-                if(kolejka.peekFirst().left != null){
-                    kolejka.add(kolejka.peekFirst().left);
+                if(cur.left != null){
+                    kolejka.add(cur.left);
                 }
-                kolejka.poll();
                 siz--;
             }
         }
